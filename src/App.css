@@ -164,8 +164,10 @@
 .form-heading-img {
   width: 100%;
   /* Scales relative to the container */
-  max-width: 320px;
-  margin: 0 auto 20px auto;
+  max-width: 360px;
+  /* Increased from 320px */
+  margin: 0 auto 25px auto;
+  /* Reduced from 35px */
   /* Reduced from 35px */
   display: block;
   height: auto;
@@ -196,10 +198,9 @@
 }
 
 .form-group input {
-  background: #0d192d;
-  /* Solid dark blue background */
-  border: 1px solid #1a3c6d;
-  /* Blue border to match the image */
+  background: linear-gradient(#0d192d, #0d192d) padding-box,
+    linear-gradient(to right, #4a3fad, #216d7d) border-box;
+  border: 2px solid transparent;
   border-radius: 6px;
   padding: 10px 15px;
   color: #ffffff;
@@ -361,6 +362,11 @@
 }
 
 @media (max-width: 480px) {
+  .app-container {
+    padding-top: 40px;
+    /* Reduced from 85px */
+  }
+
   .door-png-overlay {
     width: 520px;
     height: 520px;
@@ -377,14 +383,16 @@
   .registration-form-container {
     width: 65%;
     /* Reduced from 75% to increase horizontal padding */
-    top: 50%;
+    top: 46%;
+    /* Moved up from 50% to reduce gap at top */
   }
 
   .form-heading-img {
-    max-width: 280px;
+    max-width: 310px;
+    /* Increased from 280px */
     /* Slightly reduced to match new container width */
-    margin-bottom: 25px;
-    /* Reduced from 45px */
+    margin-bottom: 15px;
+    /* Reduced from 25px */
   }
 
   .form-group {
