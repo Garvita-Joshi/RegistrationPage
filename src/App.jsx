@@ -38,7 +38,7 @@ function App() {
                         <img src={doorPng} alt="Door" className="door-png desktop-door" />
                         <img src={doorOnlyPng} alt="Door" className="door-png mobile-door" />
 
-                        <div className="registration-form-container">
+                        <div className={`registration-form-container ${step === 2 ? 'participant-mode' : ''}`}>
                             {step === 1 ? (
                                 <>
                                     <img src={preRegisterImg} alt="Pre Register Here" className="form-heading-img" />
